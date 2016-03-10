@@ -83,7 +83,7 @@ Better resolution picutre. (BetterResolution_Tree.jpg)
 ![img_better.png](img_better.png)
 
 
-First, I get the RGB value from the image file. Then I decompose the R,G and B matrices into $\Sigma$, U and V by using single value decomposition. The $\Sigma$ I got is a vector with dimension of (800,1). I change it into a diagonal matrix which with a dimension of (800,1000). I keep the first 30 diagonal value for low resolution picture and let the remaining element become zero. For the better resolution picture, I keep the first 200 diagonal value and let the remaining element become zero. Lastly, I combine $\Sigma$, U and V into R, G and B matrices again. The new RGB values are use to generate the lower resolution image and better resolution image.
+First, I get the RGB value from the image file. Then I use np.linalg.svd to decompose the R,G and B matrices into $\Sigma$, U and V. The $\Sigma$ I got is a vector with dimension of (800,1). I change it into a diagonal matrix which with a dimension of (800,1000). I keep the first 30 diagonal value for low resolution picture and let the remaining element become zero. For the better resolution picture, I keep the first 200 diagonal value and let the remaining element become zero. Lastly, I combine $\Sigma$, U and V into R, G and B matrices again. The new RGB values are use to generate the lower resolution image and better resolution image.
 
 
 What is a sparse matrix?
@@ -94,5 +94,6 @@ In our case, we convert the vector $\Sigma$ to a diagonal matrix. We change the 
 
 
 -----------------------------------
+<sup>use https://stackedit.io/editor to render the equation if you cannot read the equation in markdown file. </sup>
+<sup>last modified: 10/3/2016</sup>
 
-<sup>last modified: change your date here</sup>
