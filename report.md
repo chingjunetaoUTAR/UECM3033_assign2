@@ -57,6 +57,10 @@ Put here your picture file (Tree.tiff)
 
 ![Tree.tiff](Tree.tiff)
 
+RGB of Tree.tiff (ori_img.png)
+
+![ori_img.png](ori_img.png)
+
 How many non zero element in $\Sigma$?
 
 There is N non zero element in $\Sigma$ .
