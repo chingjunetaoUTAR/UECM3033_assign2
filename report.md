@@ -18,6 +18,7 @@ I will check is matrix A positive definite or not. If matrix A is positive defin
 I use eigen values of matrix A and symmetricity of matrix A to check is it positive definite. 
 
 Explain how you implement your `task1.py` here.
+
 In solve(A,b)
 property of matrix wil be checked and condition will be initialized.
 This condition will decide whether LU decompotion or SOR method use to solve the system.
@@ -54,9 +55,11 @@ The iteration is set to be 20. The solution will converge within 20 iterations b
 
 Put here your picture file (Lenna.png)
 
-![Lenna.png](Lenna.png)
+![Tree.tiff](Tree.tiff)
 
 How many non zero element in $\Sigma$?
+There is N zero element in $\Sigma$
+
 
 Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
