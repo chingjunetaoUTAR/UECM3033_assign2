@@ -1,8 +1,8 @@
 UECM3033 Assignment #2 Report
 ========================================================
 
-- Prepared by: ** Put your name here**
-- Tutorial Group: T2/T3
+- Prepared by: Ching June Tao
+- Tutorial Group: T2
 
 --------------------------------------------------------
 
