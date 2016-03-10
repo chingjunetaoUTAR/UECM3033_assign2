@@ -53,18 +53,25 @@ The iteration is set to be 20. The solution will converge within 20 iterations b
 
 ## Task 2 -- SVD method and image compression
 
-Put here your picture file (Lenna.png)
+Put here your picture file (Tree.tiff)
 
 ![Tree.tiff](Tree.tiff)
 
 How many non zero element in $\Sigma$?
-There is N zero element in $\Sigma$
+
+There is N non zero element in $\Sigma$ .
+
+In our case, there are 800 non zero element in $\Sigma$ .
 
 
 Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
 
 What is a sparse matrix?
+
+A sparse matrix is a matrix in which most of the elements are zero.
+In our case, we convert the vector $\Sigma$ to a diagonal matrix. We change the dimension of $\Sigma$ from [800,1] to [800,1000] which create a sparse matrix. There are 800 non zero element and 799200 zero element in our $\Sigma$.
+
 
 
 -----------------------------------
