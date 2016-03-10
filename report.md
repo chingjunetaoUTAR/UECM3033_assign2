@@ -64,12 +64,27 @@ RGB of Tree.tiff (ori_img.png)
 How many non zero element in $\Sigma$?
 
 There is N non zero element in $\Sigma$ .
-
 In our case, there are 800 non zero element in $\Sigma$ .
 
 
 Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
+
+Lower resolution picture. (lowResolution_Tree.jpg)
+
+![lowResolution_Tree.jpg](lowResolution_Tree.jpg)
+
+![new_img.png](new_img.png)
+
+Better resolution picutre. (BetterResolution_Tree.jpg)
+
+![BetterResolution_Tree.jpg](BetterResolution_Tree.jpg)
+
+![img_better.png](img_better.png)
+
+
+First, I get the RGB value from the image file. Then I decompose the R,G and B matrices into $\Sigma$, U and V by using single value decomposition. The $\Sigma$ I got is a vector with dimension of (800,1). I change it into a diagonal matrix which with a dimension of (800,1000). I keep the first 30 diagonal value for low resolution picture and let the remaining element become zero. For the better resolution picture, I keep the first 200 diagonal value and let the remaining element become zero. Lastly, I combine $\Sigma$, U and V into R, G and B matrices again. The new RGB values are use to generate the lower resolution image and better resolution image.
+
 
 What is a sparse matrix?
 
