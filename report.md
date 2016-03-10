@@ -14,17 +14,39 @@ The reports, codes and supporting documents are to be uploaded to Github at:
 
 Explain your selection criteria here.
 
-I will the is matrix A positive definite or not. If matrix A is positive definite, SOR method will be used to solve the system. If matrix A is not positive is not positive definite, LU decomposition will be used to solve the system. This is because when the matrix is not positive definite, we could not find an optimum ω for SOR method and it will not converge to the solution.
+I will check is matrix A positive definite or not. If matrix A is positive definite, SOR method will be used to solve the system. If matrix A is not positive definite, LU decomposition will be used to solve the system. This is because when the matrix is not positive definite, we could not find an optimal ω for SOR method and it will not converge to the solution.
 I use eigen values of matrix A and symmetricity of matrix A to check is it positive definite. 
 
 Explain how you implement your `task1.py` here.
+In solve(A,b)
+property of matrix wil be checked and condition will be initialized.
+This condition will decide whether LU decompotion or SOR method use to solve the system.
 
 In LU decomposition, I use scipy.linalg.lu(A) to decompose matrix A to P, L and U.
 P is Permutation matrix.
 L is Lower Triangular matrix.
 U is Upper Triangular matrix.
+Permutation matrix is used in case the pivot element of first row of matrix A is not the largest, the algorithm might get error when solving the system.
 
-Permutation matrix is used in case the pivot element of first row of matrix A is not the largest, the algorithm might get error when solving the system. 
+$$ A = PLU  ,    Ax = b$$
+$$ PLUx = b $$
+$$ x =  U^{-1}L^{-1}P^{-1}b $$
+
+x will be solved by using the equation above. 
+
+
+In SOR method, optimal ω will be find by using the formula below. If matrix A is positive definite, optimal ω will be found and range of 0 < ω < 2. This ω will make the solution coverge to the solution faster.
+
+$$ Q = \frac{1}{w}(D - wL) $$
+$$ A = D-L-U $$
+$$ w = \frac{2[1-{\sqrt{1-p(Kj^2)}}]}{[p(Kj)]^2} $$
+where  $$Kj = D^{-1}(L+U)$$
+
+$$ X^{k+1} = Q^{-1}(Q-A)X^{k} + Q^{-1}b$$
+
+The iteration is set to be 20. The solution will converge within 20 iterations because optimal ω is used.
+
+ 
 
 ---------------------------------------------------------
 
