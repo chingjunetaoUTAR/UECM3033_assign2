@@ -17,7 +17,9 @@ ax1.imshow(img)
 ax2.imshow(r, cmap = 'Reds')
 ax3.imshow(g, cmap = 'Greens')
 ax4.imshow(b, cmap = 'Blues')
+plt.savefig('img.png')
 plt.show()
+
 
 #Decompose Red matrix by using SVD
 Red_U, TempRed_S, Red_V = np.linalg.svd(r, full_matrices = True, compute_uv = True)
@@ -69,6 +71,7 @@ ax1.imshow(img_new)
 ax2.imshow(Red_30, cmap = 'Reds')
 ax3.imshow(Green_30, cmap = 'Greens')
 ax4.imshow(Blue_30, cmap = 'Blues')
+plt.savefig('new_img.png')
 
 #save the new image
 img_new2 = Image.fromarray(img_new,'RGB')
