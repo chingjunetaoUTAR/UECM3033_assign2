@@ -50,7 +50,9 @@ The iteration is set to be 20. The solution will converge within 20 iterations b
  Both matrices are solved by LU decomposition since both matrices are not positive definite. 
  The solution for the first matrix 
  A = [[2,1,6], [8,3,2], [1,5,1]]
+ 
  b = [9, 13, 7]
+ 
  x = [0.99999999999999978, 1.0, 1.0]
  
  
@@ -61,7 +63,9 @@ A = [[6566, -5202, -4040, -5224, 1420, 6229],
       [-9306, 7213,5723, 7961, -1981,-8834],
       [-3782, 3840, 2464, -8389, 9781,-3334],
       [-6903, 5610, 4306, 5548, -1380, 3539.]]
+      
 b = [ 17603,  -63286,   56563,  -26523.5, 103396.5, -27906]
+
 x = [1.0000000000000071, -0.999999999999994, 3.9999999999999991, -3.4999999999999942, 7.0000000000000062, -1.0]
  
 
