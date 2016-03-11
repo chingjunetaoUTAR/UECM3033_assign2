@@ -24,9 +24,13 @@ property of matrix wil be checked and condition will be initialized.
 This condition will decide whether LU decompotion or SOR method use to solve the system.
 
 In LU decomposition, I use scipy.linalg.lu(A) to decompose matrix A to P, L and U.
+
 P is Permutation matrix.
+
 L is Lower Triangular matrix.
+
 U is Upper Triangular matrix.
+
 Permutation matrix is used in case the pivot element of first row of matrix A is not the largest, the algorithm might get error when solving the system.
 
 $$ A = PLU  ,    Ax = b$$
